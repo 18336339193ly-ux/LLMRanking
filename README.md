@@ -27,7 +27,7 @@
 4. 等待1-2分钟，页面将自动部署
 
 访问地址：`https://yourusername.github.io/LLMRanking`
-
+或者直接网页打开https://18336339193ly-ux.github.io/LLMRanking/在线浏览
 ### 方法二：手动部署
 
 ```bash
