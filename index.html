@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年主流大模型性能阶梯表 - 实时更新</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 2026年主流大模型性能阶梯表</h1>
+            <div class="update-info">
+                <span class="update-badge" id="updateBadge">📡 正在加载数据...</span>
+                <span class="last-update" id="lastUpdate"></span>
+            </div>
+        </header>
+
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="overview">📊 总览</button>
+            <button class="tab-btn" data-tab="benchmarks">📈 基准测试</button>
+            <button class="tab-btn" data-tab="agent">🔧 Agent能力</button>
+            <button class="tab-btn" data-tab="multimodal">👁️ 多模态</button>
+            <button class="tab-btn" data-tab="context">📄 长上下文</button>
+            <button class="tab-btn" data-tab="price">💰 价格对比</button>
+            <button class="tab-btn" data-tab="scenes">🎯 场景选型</button>
+        </nav>
+
+        <main>
+            <section id="overview" class="tab-content active">
+                <div class="section">
+                    <h2>🏆 综合能力阶梯</h2>
+                    <div class="ranking-grid" id="rankingGrid"></div>
+                </div>
+                <div class="section">
+                    <h2>📊 雷达图对比</h2>
+                    <div class="chart-container">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="benchmarks" class="tab-content">
+                <div class="section">
+                    <h2>📈 核心基准测试对比</h2>
+                    <div class="benchmark-chart">
+                        <canvas id="benchmarkChart"></canvas>
+                    </div>
+                    <div class="benchmark-table" id="benchmarkTable"></div>
+                </div>
+            </section>
+
+            <section id="agent" class="tab-content">
+                <div class="section">
+                    <h2>🔧 Agent能力对比</h2>
+                    <div class="agent-chart">
+                        <canvas id="agentChart"></canvas>
+                    </div>
+                    <div class="benchmark-table" id="agentTable"></div>
+                </div>
+            </section>
+
+            <section id="multimodal" class="tab-content">
+                <div class="section">
+                    <h2>👁️ 多模态能力对比</h2>
+                    <div class="multimodal-grid" id="multimodalGrid"></div>
+                </div>
+            </section>
+
+            <section id="context" class="tab-content">
+                <div class="section">
+                    <h2>📄 长上下文能力</h2>
+                    <div class="context-chart">
+                        <canvas id="contextChart"></canvas>
+                    </div>
+                    <div class="benchmark-table" id="contextTable"></div>
+                </div>
+            </section>
+
+            <section id="price" class="tab-content">
+                <div class="section">
+                    <h2>💰 API价格对比</h2>
+                    <div class="price-chart">
+                        <canvas id="priceChart"></canvas>
+                    </div>
+                    <div class="price-cards" id="priceCards"></div>
+                </div>
+            </section>
+
+            <section id="scenes" class="tab-content">
+                <div class="section">
+                    <h2>🎯 场景选型推荐</h2>
+                    <div class="scene-grid" id="sceneGrid"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>数据来源：<a href="https://artificialanalysis.ai" target="_blank">Artificial Analysis</a> · 
+           <a href="https://chat.lmsys.org" target="_blank">LMArena</a> · 
+           <a href="https://swebench.com" target="_blank">SWE-bench</a> · 
+           <a href="https://datalearner.com" target="_blank">DataLearnerAI</a></p>
+            <p>本页面每日自动更新 · <a href="https://github.com/yourusername/llm-ranking" target="_blank">查看源码</a></p>
+        </footer>
+    </div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
